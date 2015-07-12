@@ -59,7 +59,6 @@ jfsutils
 less
 libtool
 licenses
-light
 linux
 logrotate
 lvm2
@@ -119,6 +118,7 @@ tumbler
 unzip
 usbutils
 util-linux
+vagrant
 vi
 vim
 w3m
