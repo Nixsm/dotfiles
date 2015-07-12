@@ -24,13 +24,25 @@ setopt no_share_history
 alias rm='trash-put'
 alias cdworkspace='cd ~/Workspace'
 alias resource='source ~/.zshrc'
-alias dotfiles='cd ~/Workspace/dotfiles'
+
+if [[ -n $OSX ]]; then
+	alias dotfiles='cd ~/Workspace/git/osx-dotfiles'
+else
+	alias dotfiles='cd ~/Workspace/git/archlinux-dotfiles'
+fi
+
 alias fucking='sudo'
 alias vi='vim'
 alias pip_all="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 alias lessf="less +F"
-alias emacs="/usr/local/bin/emacsclient -ct"
-alias es="/usr/local/bin/emacs --daemon"
+
+if [[ -n $OSX ]]; then
+	alias emacs="/usr/local/bin/emacsclient -ct"
+	alias es="/usr/local/bin/emacs --daemon"
+else
+	alias emacs="/usr/bin/emacsclient -ct"
+	alias es="/usr/bin/emacs --daemon"
+fi
 
 #fasd aliases
 alias a='fasd -a'        # any
@@ -80,3 +92,4 @@ workon pyenv
 if [ -f ~/.zsh/funcs.zsh ]; then
 	source ~/.zsh/funcs.zsh
 fi
+

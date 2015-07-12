@@ -12,21 +12,17 @@ fi
 
 source $HOME/.zsh/detect_os.zsh
 
+export PATH="$HOME/.bin:$HOME/.virtualenvs/pyenv/bin"
+export PATH=$PATH":$HOME/Workspace/builds/bin:/$HOME/Workspace/bin/"
+export PATH=$PATH":/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=$PATH":$HOME/.go/bin"
+export GOPATH="$HOME/.go"
+
 if [[ -n $LINUX ]]; then
-	export PATH="$HOME/.bin:$HOME/.virtualenvs/pyenv/bin"
-	export PATH=$PATH":$HOME/Workspace/builds/bin:/$HOME/Workspace/bin/"
-	export PATH=$PATH":/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-	export PATH=$PATH":$HOME/.go/bin"
-	export GOPATH="$HOME/.go/bin"
 	export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python2"
-	export PATH=$PATH":/home/ephexeve/.cask/bin"
+	export PATH=$PATH":$HOME/.cask/bin"
 elif [[ -n $OSX ]]; then
-	export PATH="$HOME/.bin:$HOME/.virtualenvs/pyenv/bin"
-	export PATH=$PATH":$HOME/Workspace/builds/bin:$HOME/Workspace/bin/"
-	export PATH=$PATH":/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-	export PATH=$PATH":$HOME/.go/bin"
 	export PATH=/usr/texbin:"$PATH"
-	export GOPATH=~/.go
 	export VIRTUALENVWRAPPER_PYTHON="/usr/local/bin/python"
 	export PATH=$PATH":$HOME/.rvm/bin"
 fi
