@@ -61,8 +61,8 @@
 ;; completion
 (require 'ycmd)
 (ycmd-setup)
-(set-variable 'ycmd-server-command '("python" (expand-file-name "~/Workspace/git/ycmd/ycmd")))
-(set-variable 'ycmd-global-config (expand-file-name "~/.ycm_extra_conf.py"))
+(set-variable 'ycmd-server-command '("python2" "/home/ephexeve/Workspace/git/ycmd/ycmd"))
+(set-variable 'ycmd-global-config "/home/ephexeve/.ycm_extra_conf.py")
 (set-variable 'ycmd-request-message-level' -1)
 
 (require 'company-ycmd)
