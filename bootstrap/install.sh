@@ -15,7 +15,7 @@ function do_pacman {
 	aur_packages="aur_packages"
 	while read -r line
 	do
-		yaour -S $line --noconfirm --needed
+		yaourt -S $line --noconfirm --needed
 	done < "$aur_packages"
 	echo "Done pacman"
 }
@@ -65,5 +65,5 @@ do_git
 do_zsh
 
 MACKUP_BIN="$HOME/.virtualenvs/pyenv/bin/mackup"
-cp -r .mackup* ~/
-MACKUP_BIN restore
+cp -r ../.mackup* ~/
+$MACKUP_BIN restore
