@@ -1,0 +1,64 @@
+[general]
+accounts = Personal, Dev, Univali
+maxsyncaccounts = 3
+pythonfile = ~/.bin/offlineimap.py
+
+[Account Personal]
+localrepository = Personal-Local
+remoterepository = Personal-Remote
+status_backend = sqlite
+
+[Account Dev]
+localrepository = Dev-Local
+remoterepository = Dev-Remote
+status_backend = sqlite
+
+[Account Univali]
+localrepository = Univali-Local
+remoterepository = Univali-Remote
+status_backend = sqlite
+
+[Repository Personal-Local]
+type = Maildir
+localfolders = ~/.maildir/personal
+
+[Repository Dev-Local]
+type = Maildir
+localfolders = ~/.maildir/dev
+
+[Repository Univali-Local]
+type = Maildir
+localfolders = ~/.maildir/univali
+
+[Repository Personal-Remote]
+type = IMAP
+remotehost = imap.gmail.com
+remoteuser = mezger.benjamin@gmail.com
+remotepasseval = mailpasswd("benmezger_gmail")
+folderfilter = lambda folder: folder in ['INBOX', 'Sent']
+ssl = yes
+sslcacertfile = ~/.ssh/ca-certificates.crt
+maxconnections = 1
+realdelete = no
+
+[Repository Dev-Remote]
+type = IMAP
+remotehost = imap.gmail.com
+remoteuser = ephexeve@gmail.com
+remotepasseval = mailpasswd("ephexeve_gmail")
+folderfilter = lambda folder: folder in ['INBOX', 'Sent']
+ssl = yes
+sslcacertfile = ~/.ssh/ca-certificates.crt
+maxconnections = 1
+realdelete = no
+
+[Repository Univali-Remote]
+type = IMAP
+remotehost = outlook.office365.com
+remoteuser = benmezger@edu.univali.br
+remotepasseval = mailpasswd("benmezger_outlook")
+folderfilter = lambda folder: folder in ['INBOX', 'Sent']
+ssl = yes
+sslcacertfile = ~/.ssh/ca-certificates.crt
+maxconnections = 1
+realdelete = no
