@@ -24,7 +24,7 @@ fi
 
 # Emacs daemon for OSX
 if [[ -n $OSX ]]; then
-	edpid=$(pgrep -f /usr/local/bin)
+	edpid=$(pgrep -f /usr/local/bin/emacs)
 	if [ -z $edpid ]; then
 		/usr/local/bin/emacs --daemon
 	fi
