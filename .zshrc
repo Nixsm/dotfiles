@@ -80,8 +80,3 @@ workon pyenv
 if [ -f ~/.zsh/funcs.zsh ]; then
 	source ~/.zsh/funcs.zsh
 fi
-
-if [ -d ~/Workspace/git-hub ]; then
-	source /Users/benmezger/Workspace/git-hub/init
-fi
-
