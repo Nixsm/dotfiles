@@ -22,10 +22,12 @@ if (( $+commands[fortune] )); then
   fi
 fi
 
-# emacs daemon
-edpid=$(pgrep -f /usr/bin/emacs)
-if [ -z $edpid ]; then
-	/usr/bin/emacs --daemon
+# Emacs daemon for OSX
+if [[ -n $OSX ]]; then
+	edpid=$(pgrep -f /usr/local/bin)
+	if [ -z $edpid ]; then
+		/usr/local/bin/emacs --daemon
+	fi
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
