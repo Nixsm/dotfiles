@@ -160,6 +160,9 @@ bar {
 
 }
 
+new_window 1pixel
+hide_edge_borders both
+
 # autostarts
 exec --no-startup-id sxhkd
 exec --not-statup-id nm-applet

@@ -62,7 +62,7 @@
 ; add homebrew's path
 (add-to-list 'exec-path "/usr/local/bin")
 
-(set-frame-font "Inconsolata-12")
+(set-frame-font "Inconsolata-9")
 
 ; Emacs customs
 (custom-set-variables
