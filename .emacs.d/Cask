@@ -28,3 +28,4 @@
 (depends-on "elfeed")
 (depends-on "undo-tree")
 (depends-on "mu4e-multi" :git "https://github.com/fgallina/mu4e-multi.git")
+(depends-on "sx")
