@@ -1,8 +1,10 @@
 #!/bin/bash
 
 echo "Copying etc files to /etc"
-cp -rfv etc/* /etc/
+sudo cp -rfv etc/* /etc/
 echo "Done copying files"
+
+ln -s `pwd`/ca-certificates.crt ~/.ssh/
 
 # install packages
 function do_pacman {
