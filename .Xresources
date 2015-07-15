@@ -1,3 +1,4 @@
+rofi.opacity: 85
 rofi.background: #073642
 rofi.foreground: #eee8d5
 rofi.highlightbg: #b58900
