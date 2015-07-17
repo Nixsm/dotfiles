@@ -1,4 +1,3 @@
-rofi.opacity: 85
 rofi.background: #073642
 rofi.foreground: #eee8d5
 rofi.highlightbg: #b58900
@@ -8,7 +7,6 @@ rofi.padding: 1
 rofi.lines: 10
 rofi.borderwidth: 1
 rofi.opacity: 80
-rofi.font: Inconsolata 16
 rofi.location: 7
 rofi.yoffset: 0
 rofi.xoffset: 0
