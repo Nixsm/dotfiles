@@ -64,6 +64,19 @@
 
 (set-frame-font "Inconsolata-9")
 
+;; disable OSX touchpad on Emacs.
+(defun turn-off-mouse (&optional frame)
+    (interactive)
+	  (shell-command "xinput --disable 19"))
+
+(defun turn-on-mouse (&optional frame)
+    (interactive)
+	  (shell-command "xinput --enable 19"))
+
+(add-hook 'focus-in-hook #'turn-off-mouse)
+(add-hook 'focus-out-hook #'turn-on-mouse)
+(add-hook 'delete-frame-functions #'turn-on-mouse)
+
 ; Emacs customs
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
