@@ -24,13 +24,7 @@ setopt no_share_history
 alias rm='trash-put'
 alias cdworkspace='cd ~/Workspace'
 alias resource='source ~/.zshrc'
-
-if [[ -n $OSX ]]; then
-	alias dotfiles='cd ~/Workspace/git/osx-dotfiles'
-else
-	alias dotfiles='cd ~/Workspace/git/archlinux-dotfiles'
-fi
-
+alias dotfiles="cd ~/Workspace/git/dotfiles"
 alias fucking='sudo'
 alias vi='vim'
 alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
