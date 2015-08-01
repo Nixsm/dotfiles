@@ -70,8 +70,7 @@ set number
 
 let no_buffers_menu=1
 highlight BadWhitespace ctermbg=red guibg=red
-set background=dark
-colorscheme solarized
+let g:molokai_original = 1
 highlight VertSplit ctermfg=1 ctermbg=0
 
 set mousemodel=popup
@@ -252,7 +251,7 @@ au BufRead,BufNewFile *.pde set expandtab | :retab
 
 " lightline.vim
 let g:lightline = {
-	\ 'colorscheme': 'solarized',
+	\ 'colorscheme': 'wombat',
 	\ 'active': {
 		\ 'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
 		\ 'right': [ [ 'syntastic', 'lineinfo' ], ['percent'], [ 'fileformat', 'fileencoding', 'filetype' ] ]

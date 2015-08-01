@@ -1,7 +1,7 @@
 # IMAP
 set my_name = "Ben Mezger"
 set imap_user = mezger.benjamin@gmail.com
-set imap_pass = `gpg2 --quiet --batch -d ~/.mutt/accounts/benmezger.asc`
+set imap_pass = `gpg2 --quiet --batch -d ~/.pwds/benmezger_gmail.gpg`
 set folder = imaps://mezger.benjamin@imap.gmail.com/
 
 set spoolfile = +INBOX

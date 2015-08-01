@@ -1,4 +1,4 @@
-NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasr/molokai'
 NeoBundle "scrooloose/syntastic"
 NeoBundle "jmcantrell/vim-virtualenv"
 NeoBundle 'gorodinskiy/vim-coloresque'

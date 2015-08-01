@@ -37,7 +37,7 @@ remoteuser = mezger.benjamin@gmail.com
 remotepasseval = mailpasswd("benmezger_gmail")
 folderfilter = lambda folder: folder in ['INBOX', 'Sent']
 ssl = yes
-sslcacertfile = ~/.ssh/ca-certificates.crt
+sslcacertfile = /Users/benmezger/.ssh/ca-certificates.crt
 maxconnections = 1
 realdelete = no
 
@@ -48,7 +48,7 @@ remoteuser = ephexeve@gmail.com
 remotepasseval = mailpasswd("ephexeve_gmail")
 folderfilter = lambda folder: folder in ['INBOX', 'Sent']
 ssl = yes
-sslcacertfile = ~/.ssh/ca-certificates.crt
+sslcacertfile = /Users/benmezger/.ssh/ca-certificates.crt
 maxconnections = 1
 realdelete = no
 
@@ -59,6 +59,6 @@ remoteuser = benmezger@edu.univali.br
 remotepasseval = mailpasswd("benmezger_outlook")
 folderfilter = lambda folder: folder in ['INBOX', 'Sent']
 ssl = yes
-sslcacertfile = ~/.ssh/ca-certificates.crt
+sslcacertfile = /Users/benmezger/.ssh/ca-certificates.crt
 maxconnections = 1
 realdelete = no

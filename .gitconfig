@@ -2,11 +2,14 @@
 	name = Ephexeve M
 	email = ephexeve@gmail.com
 [core]
-	excludesfile = /home/ephexeve/.gitignore_global
+	excludesfile = /Users/benmezger/.gitignore_global
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [filter "media"]
 	required = true
 	clean = git media clean %f
@@ -44,3 +47,5 @@
 [grep]
 	extendRegexp = true
 	lineNumber = true
+[credential]
+	helper = osxkeychain

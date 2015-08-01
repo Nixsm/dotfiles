@@ -1,6 +1,6 @@
 [DEFAULT]
 email: mezger.benjamin@gmail.com
-passwordeval: gpg2 --quiet --batch -d ~/.mutt/accounts/benmezger.asc
+passwordeval: gpg2 --quiet --batch -d ~/.pwds/benmezger_gmail.gpg
 
 cache_filename: ~/.cache/goobook-benmezger
 cache_expiry_hours: 24

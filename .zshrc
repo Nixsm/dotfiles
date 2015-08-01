@@ -33,16 +33,18 @@ fi
 
 alias fucking='sudo'
 alias vi='vim'
+alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
+alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
 alias pip_all="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 alias lessf="less +F"
 
-if [[ -n $OSX ]]; then
-	alias emacs="/usr/local/bin/emacsclient -ct"
-	alias es="/usr/local/bin/emacs --daemon"
-else
-	alias emacs="/usr/bin/emacsclient -ct"
-	alias es="/usr/bin/emacs --daemon"
-fi
+# if [[ -n $OSX ]]; then
+# 	alias emacs="/usr/local/bin/emacsclient -ct"
+# 	alias es="/usr/local/bin/emacs --daemon"
+# else
+# 	alias emacs="/usr/bin/emacsclient -ct"
+# 	alias es="/usr/bin/emacs --daemon"
+# fi
 
 #fasd aliases
 alias a='fasd -a'        # any

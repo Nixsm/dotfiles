@@ -1,5 +1,7 @@
+grasp
 ipython
 trash-cli
-cask
-grasp
+rtv
+pip-accel
+goobook
 mackup
