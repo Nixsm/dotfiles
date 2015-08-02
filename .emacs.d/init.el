@@ -1,27 +1,41 @@
-;; package manager
+;; let cask manage my packages
 
 (if (eq system-type 'darwin)
-	(require 'cask "/usr/local/share/emacs/site-lisp/cask.el")
-	(require 'cask "/home/ephexeve/.cask/cask.el"))
-
+    (require 'cask "/usr/local/share/emacs/site-lisp/cask.el")
+  (require 'cask "/home/ephexeve/.cask/cask.el"))
 (cask-initialize)
 
-;; keep Cask file in sync with packages installed from M-x list-packages
-; (require 'pallet)
+;; custom site lisp
+(setq site-lisp-dir
+      (expand-file-name "site-lisp" user-emacs-directory))
+(add-to-list 'load-path site-lisp-dir)
 
-;; source custom file
+;; keep emacs custom settings in a different file.
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file)
 
-(defconst user-init-dir
-  (cond ((boundp 'user-emacs-directory)
-         user-emacs-directory)
-        ((boundp 'user-init-directory)
-         user-init-directory)
+;; keep emacs configuration in a different file
+(setq emacs-file (expand-file-name "emacs.el" user-emacs-directory))
+(load emacs-file)
 
-		(t "~/.emacs.d/")))
-(defun load-user-file (file)
-  (interactive "f")
-  "Load a file in current user's configuration directory"
-  (load-file (expand-file-name file user-init-dir)))
+;; load package configurations
+(require 'emacs)
+(require 'setup-orgmode)
+(require 'setup-smartline)
+(require 'setup-theme)
+(require 'setup-magit)
+(require 'setup-acejump)
+(require 'setup-helm)
+(require 'setup-projectile)
+(require 'linum-off)
+(require 'setup-completion)
+(require 'setup-git-gutter)
+(require 'setup-mu4e)
+(require 'setup-autopair)
+(require 'setup-w3m)
+(require 'setup-elfeed)
+(require 'setup-exec-path-from-shell)
+(require 'setup-xinput)
 
-(load-user-file "custom.el")
-(load-user-file "plugs.el")
+;; session
+(add-hook 'after-init-hook 'session-initialize)
