@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e # exit if any non zero return code
+#set -e # exit if any non zero return code
 
 echo "Copying ca-certificates to .ssh"
 if [ ! -d "$HOME/.ssh" ]; then
@@ -30,7 +30,7 @@ function do_python {
 	
 	ENVW=$(which virtualenvwrapper.sh)
 	export WORKON_HOME=$HOME/.virtualenvs
-	export PROJECT_HOME=$HOME/Workspace
+	export PROJECT_HOME=$HOME/workspace
 	source $ENVW
 	
 	mkvirtualenv pyenv
@@ -41,16 +41,16 @@ function do_python {
 
 function do_git {
 	echo "Installing git packages"
-	if [ ! -d "$HOME/Workspace" ]; then
-		mkdir -p $HOME/Workspace/git
-	elif [ ! -d "$HOME/Workspace/git" ]; then
-		mkdir $HOME/Workspace/git
+	if [ ! -d "$HOME/workspace" ]; then
+		mkdir -p $HOME/workspace/git
+	elif [ ! -d "$HOME/workspace/git" ]; then
+		mkdir $HOME/workspace/git
 	fi
 	
 	sh git_packages.sh
 	
 	echo "Configuring YCMD"
-	(cd $HOME/Workspace/git/ycmd/; git submodule update --init --recursive; ./build.py --clang-completer --omnisharp-completer --system-libclang)
+	(cd $HOME/workspace/git/ycmd/; git submodule update --init --recursive; ./build.py --clang-completer --omnisharp-completer --system-libclang)
 	echo "Done git"
 }
 
@@ -76,7 +76,7 @@ function do_others {
 }
 
 # do it!
-do_brew
+#do_brew
 do_python
 do_git
 do_zsh

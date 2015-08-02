@@ -31,18 +31,14 @@ fi
 
 # exports
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Workspace
-export EDITOR=vim
-export VISUAL=vim
+export PROJECT_HOME=$HOME/workspace
+export EDITOR=emacs
+export VISUAL=emacs
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export KEYTIMEOUT=1 # vim mode key lag
 export PYTHONSTARTUP="$HOME/.pythonrc"
 export MAKEFLAGS="-j2"
-export GPGKEY=1DBEA639
-export EMAIL="mezger.benjamin@gmail.com"
-export NAME="Ben Mezger"
-export SMTPSERVER="smtp.gmail.com"
 
 # python
 VIRTUAL_ENV_DISABLE_PROMPT=1

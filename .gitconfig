@@ -1,8 +1,8 @@
 [user]
-	name = Ephexeve M
-	email = ephexeve@gmail.com
+	name = Nixsm
+	email = nichsmm@gmail.com
 [core]
-	excludesfile = /Users/benmezger/.gitignore_global
+	excludesfile = /Users/nicholas/.gitignore_global
 	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

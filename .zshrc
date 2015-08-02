@@ -12,8 +12,8 @@ fi
 
 # Customize to your needs...
 
-bindkey -v # vim mode
-
+# bindkey -v # vim mode
+bindkey -e
 # zsh rehash
 setopt nohashdirs
 
@@ -22,9 +22,9 @@ setopt no_share_history
 
 # aliases
 alias rm='trash-put'
-alias cdworkspace='cd ~/Workspace'
+alias cdworkspace='cd ~/workspace'
 alias resource='source ~/.zshrc'
-alias dotfiles="cd ~/Workspace/git/dotfiles"
+alias dotfiles='~/workspace/git/dotfiles'
 alias fucking='sudo'
 alias vi='vim'
 alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
@@ -32,13 +32,13 @@ alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles NO && killa
 alias pip_all="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 alias lessf="less +F"
 
-# if [[ -n $OSX ]]; then
-# 	alias emacs="/usr/local/bin/emacsclient -ct"
-# 	alias es="/usr/local/bin/emacs --daemon"
-# else
-# 	alias emacs="/usr/bin/emacsclient -ct"
-# 	alias es="/usr/bin/emacs --daemon"
-# fi
+if [[ -n $OSX ]]; then
+	alias emacs="/usr/local/bin/emacsclient -ct"
+	alias es="/usr/local/bin/emacs --daemon"
+else
+	alias emacs="/usr/bin/emacsclient -ct"
+	alias es="/usr/bin/emacs --daemon"
+fi
 
 #fasd aliases
 alias a='fasd -a'        # any

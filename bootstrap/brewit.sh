@@ -16,7 +16,6 @@ brew install tig
 brew install reattach-to-user-namespace
 brew install ncmpcpp
 brew install mpd
-brew install weechat --with-python --with-perl --with-lua
 brew install ranger
 brew install mu --with-emacs
 brew install offline-imap
@@ -35,7 +34,6 @@ brew tap caskroom/fonts
 brew cask update
 brew cask install google-chrome
 brew cask install transmission
-brew cask install skype
 brew cask install iterm2
 brew cask install vlc
 brew cask install dropbox
@@ -43,6 +41,5 @@ brew cask install virtualbox
 brew cask install vagrant 
 brew cask install java6
 brew cask install emacs
-brew cask install firefox
 brew cask install font-inconsolata
 brew cask install font-inconsolata-for-powerline
