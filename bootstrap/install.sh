@@ -17,7 +17,10 @@ function do_brew {
 	
 	echo "Installing OSX packages"
     sh brewit.sh
-	
+
+    # link installed coreutils stuff
+    sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+    
 	echo "Installing system python packages"
 	pip install --upgrade pip setuptools
 	pip install virtualenvwrapper
@@ -72,11 +75,12 @@ function do_mackup {
 }
 
 function do_others {
-	sh osx.sh	
+	sh osx.sh
+    dark-mode
 }
 
 # do it!
-#do_brew
+do_brew
 do_python
 do_git
 do_zsh
