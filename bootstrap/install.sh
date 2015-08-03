@@ -79,7 +79,7 @@ function do_others {
     dark-mode
     echo "Copying emacs daemon launch script"
     cp ../emacs-daemon.plist ~/Library/LaunchAgents/emacs-daemon.plist
-    echo "Copygin random wallpaper at login script"
+    echo "Copying random wallpaper script"
     cp ../random-wallpaper.plist ~/Library/LaunchAgents/random-wallpaper.plist
 }
 

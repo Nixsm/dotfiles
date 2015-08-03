@@ -5,7 +5,7 @@
    <key>RunAtLoad</key>
    <true />
    <key>Program</key>
-   <string>/Users/nicholas/.wallpapers/random-wallpaper.py</string>
+   <string>/Users/nicholas/.onLogin.app</string>
  </dict>
 </plist>
 
