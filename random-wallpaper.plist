@@ -1,0 +1,18 @@
+<plist version="1.0">
+ <dict>
+   <key>Label</key>
+   <string>random-wallpaper</string>
+   <key>RunAtLoad</key>
+   <true />
+   <key>Program</key>
+   <string>/Users/nicholas/.wallpapers/random-wallpaper.py</string>
+ </dict>
+</plist>
+
+       
+
+
+
+
+
+

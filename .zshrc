@@ -21,9 +21,9 @@ setopt nohashdirs
 setopt no_share_history
 
 # aliases
-
-
-alias python='ipython3'
+alias py='ipython3'
+alias wk='cd ~/workspace'
+alias python='python3'
 alias rm='trash-put'
 alias cdworkspace='cd ~/workspace'
 alias resource='source ~/.zshrc'

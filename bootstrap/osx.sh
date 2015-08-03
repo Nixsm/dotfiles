@@ -1,4 +1,9 @@
+# Stolen from https://github.com/mathiasbynens/dotfiles/blob/master/.osx :)
+
 sudo -v # prompt user for password upfront
+
+# Keep-alive: update existing `sudo` time stamp until `.osx` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # play chime sound when macbook power connects
 defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; 
@@ -116,6 +121,16 @@ defaults write com.apple.dock autohide-delay -float 0
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
 
+# Set the icon size of Dock items to 36 pixels
+defaults write com.apple.dock tilesize -int 36
+# Change minimize/maximize window effect
+defaults write com.apple.dock mineffect -string "scale"
+# Minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Don’t animate opening applications from the Dock
+defaults write com.apple.dock launchanim -bool false
+
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
@@ -185,3 +200,14 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true
+
+# Show remaining battery time; hide percentage
+defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+defaults write com.apple.menuextra.battery ShowTime -string "YES"
+
+# Always show scrollbars
+
+defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+
+# change icon sidebar to medium
+defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2

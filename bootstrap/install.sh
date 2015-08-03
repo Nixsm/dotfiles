@@ -77,12 +77,19 @@ function do_mackup {
 function do_others {
 	sh osx.sh
     dark-mode
+    echo "Copying emacs daemon launch script"
+    cp ../emacs-daemon.plist ~/Library/LaunchAgents/emacs-daemon.plist
+    echo "Copygin random wallpaper at login script"
+    cp ../random-wallpaper.plist ~/Library/LaunchAgents/random-wallpaper.plist
 }
 
 # do it!
-do_brew
-do_python
-do_git
-do_zsh
-do_mackup
+#do_brew
+#do_python
+#do_git
+#do_zsh
+#do_mackup
+do_others
 
+echo "Rebooting"
+sudo reboot
