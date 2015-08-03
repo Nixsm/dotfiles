@@ -84,12 +84,10 @@ function do_others {
 }
 
 # do it!
-#do_brew
-#do_python
-#do_git
-#do_zsh
-#do_mackup
+do_brew
+do_python
+do_git
+do_zsh
+do_mackup
 do_others
 
-echo "Rebooting"
-sudo reboot
