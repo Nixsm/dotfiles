@@ -4,3 +4,4 @@
 *.pyc
 .#*
 .weechat/sec.conf
+.emacs.d/.cask
