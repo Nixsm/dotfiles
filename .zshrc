@@ -21,6 +21,7 @@ setopt nohashdirs
 setopt no_share_history
 
 # aliases
+alias ip='ifconfig | grep inet'
 alias py='ipython3'
 alias wk='cd ~/workspace'
 alias python='python3'

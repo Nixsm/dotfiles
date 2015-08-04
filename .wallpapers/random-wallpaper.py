@@ -4,11 +4,14 @@ import requests
 import json
 import subprocess
 
+timeout = 0;
+
 while True:
     try:
         r = requests.get("http://www.google.com")
-        if r.status_code == 200:
+        if r.status_code == 200 or timeout > 15:
             break;
+        timeout += 1
     except:
         pass
 
