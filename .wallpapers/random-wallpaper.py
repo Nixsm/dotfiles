@@ -3,6 +3,7 @@
 import requests
 import json
 import subprocess
+from urllib import request
 
 timeout = 0;
 
@@ -18,20 +19,18 @@ while True:
 jsonText = ""
 
 while True:
-    r = requests.get('https://api.desktoppr.co/1/wallpapers/random?width=2560')
+    r = requests.get('https://api.desktoppr.co/1/wallpapers/random')
 
     jsonText = json.loads(r.text)
-    if jsonText['response']['width'] >= 2560:
+    if jsonText['response']['width'] >= 2560 and jsonText['response']['height'] >= 1080:
         break
 
 imageUrl = jsonText['response']['image']['url']
 
-
 path = "/Users/nicholas/.wallpapers/downloaded.jpg"
 
-r = requests.get(imageUrl, stream=True)
-f = open(path,'wb')
-f.write(requests.get(imageUrl).content)
+f = open(path, 'wb')
+f.write(request.urlopen(imageUrl).read())
 f.close()
 
 SCRIPT = """/usr/bin/osascript<<END
