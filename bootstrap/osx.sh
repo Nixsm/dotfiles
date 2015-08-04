@@ -10,7 +10,7 @@ defaults write com.apple.PowerChime ChimeOnAllHardware -bool true;
 open /System/Library/CoreServices/PowerChime.app &
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume=" "
+sudo nvram SystemAudioVolume="%01"
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true
