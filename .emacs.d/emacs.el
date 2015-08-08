@@ -79,5 +79,5 @@
 (setq auto-save-file-name-transforms '((".*" "~/.emacs.d/auto-save-list/" t)))
 
 ;; set font
-(set-frame-font "Inconsolata-11")
+(set-frame-font "Inconsolata-18")
 
