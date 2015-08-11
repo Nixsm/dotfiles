@@ -10,7 +10,13 @@ defaults write com.apple.PowerChime ChimeOnAllHardware -bool true;
 open /System/Library/CoreServices/PowerChime.app &
 
 # Disable the sound effects on boot
-sudo nvram SystemAudioVolume="%01"
+sudo nvram SystemAudioVolume=" "
+
+# Always boot in verbose mode
+sudo nvram boot-args="-v"
+
+# Show IP, Hostname, OS
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
 defaults write com.apple.universalaccess reduceTransparency -bool true
@@ -135,7 +141,17 @@ defaults write com.apple.dock launchanim -bool false
 defaults write com.apple.dock autohide -bool true
 
 # Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist > /dev/null 2>&1
+
+# Hot Corner Top right == Desktop
+defaults write com.apple.dock wvous-tr-corner -int 4
+defaults write com.apple.dock wvous-tr-modifier -int 0
+
+# hide iTerm tab title bars
+defaults write com.googlecode.iterm2 HideTab -bool true
+
+# Remove prompt when quitting
+defaults write com.googlecode.iterm2 HideTab -bool true
 
 # Disable the Launchpad gesture (pinch with thumb and three fingers)
 #defaults write com.apple.dock showLaunchpadGestureEnabled -int 0

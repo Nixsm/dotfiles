@@ -81,6 +81,8 @@ function do_others {
     cp ../emacs-daemon.plist ~/Library/LaunchAgents/emacs-daemon.plist
     echo "Copying random wallpaper script"
     cp ../random-wallpaper.plist ~/Library/LaunchAgents/random-wallpaper.plist
+
+    open "/Users/nicholas/workspace/git/dotfiles/bootstrap/files/Monokai.itermcolors"
 }
 
 # do it!
