@@ -1,8 +1,8 @@
 ;; let cask manage my packages
 
 (if (eq system-type 'darwin)
-    (require 'cask "/usr/local/share/emacs/site-lisp/cask.el")
-  (require 'cask "/home/ephexeve/.cask/cask.el"))
+    (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
+  (require 'cask "/Users/nicholas/.cask/cask.el"))
 (cask-initialize)
 
 ;; custom site lisp
