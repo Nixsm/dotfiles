@@ -1,4 +1,4 @@
-NeoBundle 'tomasr/molokai'
+NeoBundle 'sickill/vim-monokai'
 NeoBundle "scrooloose/syntastic"
 NeoBundle "jmcantrell/vim-virtualenv"
 NeoBundle 'gorodinskiy/vim-coloresque'

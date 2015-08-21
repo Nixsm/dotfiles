@@ -70,8 +70,11 @@ set number
 
 let no_buffers_menu=1
 highlight BadWhitespace ctermbg=red guibg=red
-let g:molokai_original = 1
+" Let g:molokai_original = 1
 highlight VertSplit ctermfg=1 ctermbg=0
+
+syntax enable
+colorscheme monokai
 
 set mousemodel=popup
 set t_Co=256

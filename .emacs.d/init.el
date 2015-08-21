@@ -36,5 +36,6 @@
 (require 'setup-elfeed)
 (require 'setup-exec-path-from-shell)
 (require 'setup-glsl)
+(require 'setup-cmake)
 ;; session
 (add-hook 'after-init-hook 'session-initialize)
