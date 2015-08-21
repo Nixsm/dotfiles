@@ -17,7 +17,9 @@
 [push]
 	default = current
 [alias]
-    pl = pull
+	a = add
+	cl = clean -d -f
+	pl = pull
     ps = push
     unadd = reset HEAD
 	ec = config --global -e # edit gitconfig

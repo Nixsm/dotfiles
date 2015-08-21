@@ -35,7 +35,6 @@
 (require 'setup-w3m)
 (require 'setup-elfeed)
 (require 'setup-exec-path-from-shell)
-(require 'setup-xinput)
-
+(require 'setup-glsl)
 ;; session
 (add-hook 'after-init-hook 'session-initialize)

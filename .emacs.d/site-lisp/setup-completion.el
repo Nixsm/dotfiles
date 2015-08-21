@@ -8,7 +8,7 @@
 (require 'company-ycmd)
 (company-ycmd-setup)
 ;(add-hook 'after-init-hook 'global-company-mode)
-(setq company-global-modes '(python-mode c-mode c++-mode ruby-mode))
+(setq company-global-modes '(python-mode c-mode c++-mode ruby-mode cmake-mode glsl-mode))
 (global-company-mode)
 
 (require 'flycheck-ycmd)
