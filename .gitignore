@@ -1,4 +1,5 @@
 .weechat/script/plugins.xml.gz
+.wallpapers/downloaded.jpg
 *.swp
 .DS_Store
 *.pyc
