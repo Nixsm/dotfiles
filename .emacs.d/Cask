@@ -2,6 +2,9 @@
 (source melpa)
 (source org "http://orgmode.org/elpa/")
 
+(depends-on "rainbow-mode")
+(depends-on "rainbow-delimiters")
+(depends-on "cmake-font-lock")
 (depends-on "org")
 (depends-on "org-plus-contrib")
 (depends-on "smart-mode-line")

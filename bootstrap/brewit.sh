@@ -7,10 +7,9 @@ brew install emacs --with-ctags --with-gnutls --with-mailutils --with-imagemagic
 brew install fortune
 brew install cask
 brew install fasd
-brew install ack
+brew install the_silver_searcher
 brew install gnupg2
 brew install tmux
-brew install tor
 brew install tig
 brew install reattach-to-user-namespace
 brew install ncmpcpp

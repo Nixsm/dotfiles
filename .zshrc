@@ -86,7 +86,7 @@ bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
 # python
-workon pyenv
+#workon pyenv
 
 # extra
 if [ -f ~/.zsh/funcs.zsh ]; then
