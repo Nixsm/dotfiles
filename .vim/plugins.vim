@@ -1,3 +1,4 @@
+NeoBundle 'rdnetto/YCM-Generator'
 NeoBundle 'sickill/vim-monokai'
 NeoBundle "scrooloose/syntastic"
 NeoBundle "jmcantrell/vim-virtualenv"

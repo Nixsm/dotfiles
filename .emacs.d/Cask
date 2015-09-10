@@ -2,6 +2,7 @@
 (source melpa)
 (source org "http://orgmode.org/elpa/")
 
+<<<<<<< Updated upstream
 (depends-on "rainbow-mode")
 (depends-on "rainbow-delimiters")
 (depends-on "cmake-font-lock")
@@ -25,3 +26,4 @@
 (depends-on "elfeed")
 (depends-on "undo-tree")
 (depends-on "pbcopy")
+(depends-on "cmake-font-lock")
