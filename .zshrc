@@ -12,8 +12,8 @@ fi
 
 # Customize to your needs...
 
-# bindkey -v # vim mode
-bindkey -e
+bindkey -v # vim mode
+# bindkey -e
 # zsh rehash
 setopt nohashdirs
 
