@@ -4,6 +4,12 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 
+;; set ctrl h to delete char
+(global-set-key "\C-h" 'delete-backward-char)
+
+;; change help command to ctrl x ?
+(global-set-key "\C-x?" 'help-command)
+
 ;; set cursor type
 (setq-default cursor-type 'bar)
 
@@ -38,6 +44,12 @@
 ;; highlight current line
 (global-hl-line-mode t)
 
+;; start rainbow-mode
+;;(rainbow-mode 1)
+
+;; start rainbow-delimiters
+;;(rainbow-delimiters-mode 1)
+
 ; start emacs with empty file
 (setq inhibit-splash-screen t)
 (switch-to-buffer "**")
@@ -53,7 +65,7 @@
 (when (fboundp 'winner-mode)
   (winner-mode 1))
 
-; windmove
+; windmovea
 (windmove-default-keybindings)
 
 ; CamelCase distinction
@@ -64,6 +76,7 @@
 
 ; read only prompt
 (setq comint-prompt-read-only t)
+
 
 ; add homebrew's path
 (add-to-list 'exec-path "/usr/local/bin")

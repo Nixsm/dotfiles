@@ -3,6 +3,7 @@
 (source org "http://orgmode.org/elpa/")
 
 (depends-on "evil")
+(depends-on "fic-mode")
 (depends-on "rainbow-mode")
 (depends-on "rainbow-delimiters")
 (depends-on "cmake-font-lock")
@@ -26,3 +27,4 @@
 (depends-on "elfeed")
 (depends-on "undo-tree")
 (depends-on "pbcopy")
+(depends-on "cmake-font-lock")

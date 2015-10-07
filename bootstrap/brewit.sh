@@ -12,7 +12,6 @@ brew install gnupg2
 brew install tmux
 brew install tig
 brew install reattach-to-user-namespace
-brew install ncmpcpp
 brew install mpd
 brew install ranger
 brew install mu --with-emacs
