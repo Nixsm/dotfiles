@@ -26,7 +26,6 @@ alias py='ipython3'
 alias wk='cd ~/workspace'
 alias python='python3'
 alias rm='trash-put'
-alias cdworkspace='cd ~/workspace'
 alias resource='source ~/.zshrc'
 alias dotfiles='~/workspace/git/dotfiles'
 alias fucking='sudo'
@@ -71,13 +70,5 @@ bindkey -a '^R' redo
 bindkey '^G' what-cursor-position
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
-
-# python
-#workon pyenv
-
-# extra
-if [ -f ~/.zsh/funcs.zsh ]; then
-	source ~/.zsh/funcs.zsh
-fi
 
 eval $(thefuck --alias)

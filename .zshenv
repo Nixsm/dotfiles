@@ -10,8 +10,6 @@ if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-source $HOME/.zsh/detect_os.zsh
-
 #export PATH="$HOME/.bin:$HOME/.virtualenvs/pyenv/bin"
 #export PATH=$PATH":$HOME/workspace/builds/bin:/$HOME/workspace/bin/"
 export PATH=$PATH":/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
