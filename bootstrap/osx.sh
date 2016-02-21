@@ -105,7 +105,7 @@ defaults write com.apple.finder QuitMenuItem -bool true
 
 # Set Home as the default location for new Finder windows
 # For other paths, use `PfLo` and `file:///full/path/here/`
-defaults write com.apple.finder NewWindowTarget -string "PfLo"
+# defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://Users/nicholas/"
 
 # Display full POSIX path as Finder window title
@@ -222,7 +222,6 @@ defaults write com.apple.menuextra.battery ShowPercent -string "NO"
 defaults write com.apple.menuextra.battery ShowTime -string "YES"
 
 # Always show scrollbars
-
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 # change icon sidebar to medium

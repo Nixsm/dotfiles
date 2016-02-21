@@ -34,7 +34,7 @@ function do_git {
 	sh git_packages.sh
 	
 	echo "Configuring YCMD"
-	(cd $HOME/workspace/git/ycmd/; git submodule update --init --recursive; ./build.py --clang-completer --omnisharp-completer --system-libclang)
+	(cd $HOME/workspace/git/ycmd/; git submodule update --init --recursive; ./build.py --clang-completer --system-libclang)
 	echo "Done git"
 }
 

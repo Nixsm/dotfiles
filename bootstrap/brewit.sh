@@ -24,6 +24,7 @@ brew install findutils --with-default-names
 brew install gnu-sed --with-default-names
 brew install dark-mode
 brew install tree
+brew install thefuck
 
 brew tap homebrew/dupes
 brew install homebrew/dupes/gdb --with-brewed-python
@@ -37,10 +38,9 @@ brew install caskroom/cask/brew-cask
 brew tap caskroom/fonts
 
 brew cask update
-brew cask install google-chrome
+brew cask install chromium
 brew cask install iterm2
 brew cask install vlc
-brew cask install java6
 brew cask install emacs
 brew cask install font-inconsolata
 brew cask install font-inconsolata-for-powerline
