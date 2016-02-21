@@ -36,14 +36,6 @@ alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles NO && killa
 alias pip_all="pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U"
 alias lessf="less +F"
 
-if [[ -n $OSX ]]; then
-	alias emacs="/usr/local/bin/emacsclient -ct"
-	alias es="/usr/local/bin/emacs --daemon"
-else
-	alias emacs="/usr/bin/emacsclient -ct"
-	alias es="/usr/bin/emacs --daemon"
-fi
-
 #fasd aliases
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
@@ -56,11 +48,6 @@ alias zz='fasd_cd -d -i' # cd with interactive selection
 
 # fasd
 eval "$(fasd --init auto)"
-
-# solarized colors for xterm
-if [[ -n $LINUX ]]; then
-	eval `dircolors $HOME/.dircolors`
-fi
 
 # key bindings
 # Use vim cli mode
@@ -93,3 +80,4 @@ if [ -f ~/.zsh/funcs.zsh ]; then
 	source ~/.zsh/funcs.zsh
 fi
 
+eval $(thefuck --alias)

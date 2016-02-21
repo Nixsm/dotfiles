@@ -2,15 +2,8 @@
 
 #set -e # exit if any non zero return code
 
-echo "Copying ca-certificates to .ssh"
-if [ ! -d "$HOME/.ssh" ]; then
-	mkdir $HOME/.ssh
-fi
-
-ln -fs $(pwd)/ca-certificates.crt $HOME/.ssh/ca-certificates.crt
-
 function do_brew {
-	if [ ! hash brew 2>/dev/null ]; then
+	if [ ! $(hash brew 2>/dev/null) ]; then
 		echo "Installing homebrew"
 		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	fi
@@ -23,21 +16,9 @@ function do_brew {
     
 	echo "Installing system python packages"
 	pip install --upgrade pip setuptools
-	pip install virtualenvwrapper
 }
 
 function do_python {
-	# if running any virtualenv, deactivate it.
-	: ${VIRTUAL_ENV}? deactivate
-	echo "Configuring virtualenvwrapper..."
-	
-	ENVW=$(which virtualenvwrapper.sh)
-	export WORKON_HOME=$HOME/.virtualenvs
-	export PROJECT_HOME=$HOME/workspace
-	source $ENVW
-	
-	mkvirtualenv pyenv
-	workon pyenv
 	pip install --upgrade pip setuptools
 	pip install -r requirements.txt
 }
@@ -77,8 +58,8 @@ function do_mackup {
 function do_others {
 	sh osx.sh
     dark-mode
-    echo "Copying emacs daemon launch script"
-    cp ../emacs-daemon.plist ~/Library/LaunchAgents/emacs-daemon.plist
+    #echo "Copying emacs daemon launch script"
+    #cp ../emacs-daemon.plist ~/Library/LaunchAgents/emacs-daemon.plist
     echo "Copying random wallpaper script"
     cp ../random-wallpaper.plist ~/Library/LaunchAgents/random-wallpaper.plist
 

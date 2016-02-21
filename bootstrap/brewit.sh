@@ -14,8 +14,6 @@ brew install tig
 brew install reattach-to-user-namespace
 brew install mpd
 brew install ranger
-brew install mu --with-emacs
-brew install offline-imap
 brew install texinfo
 brew install ispell
 brew install valgrind --head
@@ -40,12 +38,8 @@ brew tap caskroom/fonts
 
 brew cask update
 brew cask install google-chrome
-brew cask install transmission
 brew cask install iterm2
 brew cask install vlc
-brew cask install dropbox
-brew cask install virtualbox
-brew cask install vagrant 
 brew cask install java6
 brew cask install emacs
 brew cask install font-inconsolata
