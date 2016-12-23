@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#set -e # exit if any non zero return code
+set -e # exit if any non zero return code
 
 function do_brew {
 	if [ ! $(hash brew 2>/dev/null) ]; then
@@ -10,18 +10,6 @@ function do_brew {
 	
 	echo "Installing OSX packages"
     sh brewit.sh
-
-    # link installed coreutils stuff
-    sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
-    
-	echo "Installing system python packages"
-	pip install --upgrade pip setuptools
-}
-
-function do_python {
-	pip install --upgrade pip setuptools
-	pip install -r requirements.txt
-}
 
 function do_git {
 	echo "Installing git packages"
@@ -58,17 +46,12 @@ function do_mackup {
 function do_others {
 	sh osx.sh
     dark-mode
-    #echo "Copying emacs daemon launch script"
-    #cp ../emacs-daemon.plist ~/Library/LaunchAgents/emacs-daemon.plist
-    echo "Copying random wallpaper script"
-    cp ../random-wallpaper.plist ~/Library/LaunchAgents/random-wallpaper.plist
 
     open "/Users/nicholas/workspace/git/dotfiles/bootstrap/files/Monokai.itermcolors"
 }
 
 # do it!
 do_brew
-do_python
 do_git
 do_zsh
 do_mackup

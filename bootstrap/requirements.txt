@@ -1,4 +1,0 @@
-ipython
-trash-cli
-pip-accel
-mackup

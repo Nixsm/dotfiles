@@ -8,16 +8,11 @@ brew install fortune
 brew install cask
 brew install fasd
 brew install the_silver_searcher
-brew install gnupg2
-brew install tmux
 brew install tig
-brew install reattach-to-user-namespace
-brew install mpd
 brew install ranger
 brew install texinfo
 brew install ispell
 brew install valgrind --head
-brew install ghostscript
 brew install coreutils
 brew install moreutils
 brew install findutils --with-default-names
@@ -25,6 +20,7 @@ brew install gnu-sed --with-default-names
 brew install dark-mode
 brew install tree
 brew install thefuck
+brew install mackup
 
 brew tap homebrew/dupes
 brew install homebrew/dupes/gdb --with-brewed-python
