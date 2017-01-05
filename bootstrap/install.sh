@@ -27,14 +27,6 @@ function do_git {
 }
 
 function do_zsh {
-	if [ ! -d "$HOME/.zprezto" ]; then
-		git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-		PRETZO="""setopt EXTENDED_GLOB
-		for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-			  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-		  done"""
-		zsh $PREZTO
-	fi
 	chsh -s /bin/zsh 
 }
 
