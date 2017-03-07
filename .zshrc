@@ -90,3 +90,5 @@ alias zz='fasd_cd -d -i' # cd with interactive selection
 alias lsusb="ioreg -p IOUSB -w0 | sed 's/[^o]*o //; s/@.*$//' | grep -v '^Root.*'"
 
 alias g="git"
+
+eval "$(fasd --init auto)"
